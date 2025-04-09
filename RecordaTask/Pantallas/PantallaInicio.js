@@ -4,7 +4,7 @@ import { obtenerActividadesPorUsuario, eliminarActividadPorUsuario } from '../Ut
 import { useFocusEffect } from '@react-navigation/native';
 
 const PantallaInicio = ({ route, navigation }) => {
-  const { usuario } = route.params; // Obtén el usuario desde los parámetros de navegación
+  const { usuario } = route.params; 
   const [actividades, setActividades] = useState([]);
 
   const cargarActividades = async () => {
@@ -45,11 +45,11 @@ const PantallaInicio = ({ route, navigation }) => {
     const fecha = new Date(fechaEntrega);
 
     if (fecha.toDateString() === hoy.toDateString()) {
-      return '#4CAF50'; // Verde: Entrega hoy
+      return '#4CAF50'; 
     } else if (fecha < hoy) {
-      return '#FF0000'; // Rojo: Fecha de entrega pasada
+      return '#FF0000'; 
     } else {
-      return '#2196F3'; // Azul: Fecha futura
+      return '#2196F3'; 
     }
   };
 
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   textoActividad: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#fff', // Asegúrate de que el texto sea visible sobre el fondo
+    color: '#fff', 
   },
   botonesContainer: {
     flexDirection: 'row',
